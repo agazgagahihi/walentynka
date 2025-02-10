@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynka</title>
+    <style>
+        body {
+            background-color: #ff99ff;
+            text-align: center;
+            font-family: Impact, sans-serif;
+            transition: background 0.5s;
+        }
+        h1 {
+            color: #37474f;
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 24px;
+            color: #ff00cc;
+            background: white;
+            border: 2px solid #ff00cc;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background: #ff00cc;
+            color: white;
+        }
+        #image-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+<div>
+        <img src="https://i.pinimg.com/736x/ec/47/3e/ec473e4c797b7ed4f7a39d284f2a9e01.jpg" alt="Zdjęcie" style="width: 30%; height: auto;">
+</div>
+        <h1>BĘDZIESZ MOJĄ WALENTYNKĄ?</h1>
+        <div>
+            <button class="button" onclick="showAnswer('tak')">TAK</button>
+            <button class="button" onclick="showAnswer('nie')">NIE</button>
+        </div>
+    </div>
+
+    <script>
+        function showAnswer(answer) {
+            let content = document.getElementById('content');
+            if (answer === 'tak') {
+                document.body.style.backgroundColor = '#ff99ff';
+                content.innerHTML = `
+                    <img src="https://i.pinimg.com/736x/db/44/29/db4429bdf172d5925f2b50bdf9620264.jpg" alt="Zdjęcie Tak" style="width: 30%; height: auto;">
+                    <h1>zapraszam cie na randeczke <3</h1>
+                `;
+            } else {
+                document.body.style.backgroundColor = '#333366';
+                content.innerHTML = `
+                    <img src="https://i.pinimg.com/736x/c5/19/96/c519967beb440437d8521adbc6c795e9.jpg" alt="Zdjęcie Nie" style="width: 30%; height: auto;">
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>
